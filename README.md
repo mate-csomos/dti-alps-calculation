@@ -9,10 +9,16 @@ The following steps are recommended after preprocessing of the DTI images:
     ```bash
     dtifit -k ${data} -o ${subjects_main_folder}/dtifit/dti -m ${mask} -r ${bvec} -b ${bval} --save_tensor
     ```
-2. Extract the diffusivity directions from the tensor file: volumes 0, 3 and 5. Then copy the files into a 'tbss' folder.
+2. Create a subjects.txt
+
+   Example:
+   ```bash
+   for i in sub*;do echo $i >> subjects.txt;done
+   ```
+4. Extract the diffusivity directions from the tensor file: volumes 0, 3 and 5. Then copy the files into a 'tbss' folder.
    * Example script: [extract_tensor_and_prepare_tbss.sh](extract_tensor_and_prepare_tbss.sh)
    * Copy FA files into tbss and the dxx, dyy and dzz files into the corresponding folders.
-3. [Run FSL's TBSS process](https://fsl.fmrib.ox.ac.uk/fsl/docs/#/diffusion/tbss).
+5. [Run FSL's TBSS process](https://fsl.fmrib.ox.ac.uk/fsl/docs/#/diffusion/tbss).
     ```bash
     tbss_1_preproc *.nii.gz
     ```
@@ -25,7 +31,7 @@ The following steps are recommended after preprocessing of the DTI images:
     ```bash
     tbss_4_prestats 0.2
     ```
-4. Run tbss_non_FA from tbss folder. Repeat this for each folder.
+6. Run tbss_non_FA from tbss folder. Repeat this for each folder.
    ```bash
    tbss_non_FA dxx
    ```
@@ -35,7 +41,7 @@ The following steps are recommended after preprocessing of the DTI images:
    ```bash
    tbss_non_FA dzz
     ```
-5. Extract diffusivities below the ROI-s.
+7. Extract diffusivities below the ROI-s.
     1. Copy subjects.txt, the [included .nii.gz ROIs](tbss/stats/), both [extract diffusivities .sh files](tbss/stats/) and [calculate_alps.py](tbss/stats/) into tbss/stats/ folder.
     2. Open with fsleyes the all_FA_skeletonized.nii.gz and the included ROIs. Enter Edit mode.
           1. Create 4 empty 4D mask image (names below).
