@@ -10,7 +10,7 @@ The following steps are recommended after preprocessing of the DTI images:
     dtifit -k ${data} -o ${subjects_main_folder}/dtifit/dti -m ${mask} -r ${bvec} -b ${bval} --save_tensor
     ```
 2. Extract the diffusivity directions from the tensor file: volumes 0, 3 and 5. Then copy the files into a 'tbss' folder.
-   * Example script: [extract_tensor_and_prepare_tbss.sh]()
+   * Example script: [extract_tensor_and_prepare_tbss.sh](extract_tensor_and_prepare_tbss.sh)
    * Copy FA files into tbss and the dxx, dyy and dzz files into the corresponding folders.
 3. Run FSL's TBSS process (https://fsl.fmrib.ox.ac.uk/fsl/docs/#/diffusion/tbss).
     ```bash
