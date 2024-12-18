@@ -1,7 +1,7 @@
 # dti-alps-calculation
 This script is used to calculate the DTI-ALPS, introduced by Taoka et al. 2017. This script is used after preprocessing DTI files (see good tutorial: https://andysbrainbook.readthedocs.io/en/latest/MRtrix/MRtrix_Course/MRtrix_04_Preprocessing.html) and running the complete FSL TBSS pipeline and tbss_non_FA on diffusivity files.
 
-The following steps are recommended after prerocessing of the DTI images:
+The following steps are recommended after preprocessing of the DTI images:
 
 1. Run DTIFIT on the preprocessed images with FSL (https://fsl.fmrib.ox.ac.uk/fsl/docs/#/diffusion/dtifit).
     * Make sure "--save_tensor" is passed in as argument.
