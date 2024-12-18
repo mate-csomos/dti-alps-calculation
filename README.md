@@ -36,7 +36,7 @@ The following steps are recommended after preprocessing of the DTI images:
    tbss_non_FA dzz
     ```
 5. Extract diffusivities below the ROI-s.
-    1. Copy subjects.txt, the [included ROIs](), both [extract_diffusivities_files]() and [calculate_alps.py]() into tbss/stats/ folder.
+    1. Copy subjects.txt, the [included ROIs](/rois/), both [extract_diffusivities_files]() and [calculate_alps.py]() into tbss/stats/ folder.
     2. Open with fsleyes the all_FA_skeletonized.nii.gz and the included ROIs. Enter Edit mode.
           1. Create 4 empty 4D mask image (names below).
           ```
