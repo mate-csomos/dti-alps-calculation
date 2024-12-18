@@ -3,7 +3,7 @@ This script is used to calculate the DTI-ALPS, introduced by Taoka et al. 2017. 
 
 The following steps are recommended after preprocessing of the DTI images:
 
-1. Run DTIFIT on the preprocessed images with FSL (https://fsl.fmrib.ox.ac.uk/fsl/docs/#/diffusion/dtifit).
+1. [Run DTIFIT on the preprocessed images with FSL](https://fsl.fmrib.ox.ac.uk/fsl/docs/#/diffusion/dtifit).
     * Make sure "--save_tensor" is passed in as argument.
     * Recommended parameters (replace ${variable} with actual filepaths):
     ```bash
@@ -12,7 +12,7 @@ The following steps are recommended after preprocessing of the DTI images:
 2. Extract the diffusivity directions from the tensor file: volumes 0, 3 and 5. Then copy the files into a 'tbss' folder.
    * Example script: [extract_tensor_and_prepare_tbss.sh](extract_tensor_and_prepare_tbss.sh)
    * Copy FA files into tbss and the dxx, dyy and dzz files into the corresponding folders.
-3. Run FSL's TBSS process (https://fsl.fmrib.ox.ac.uk/fsl/docs/#/diffusion/tbss).
+3. [Run FSL's TBSS process](https://fsl.fmrib.ox.ac.uk/fsl/docs/#/diffusion/tbss).
     ```bash
     tbss_1_preproc *.nii.gz
     ```
