@@ -1,5 +1,5 @@
 # dti-alps-calculation
-This repository describes the calculation of DTI-ALPS, introduced by Taoka et al. 2017 via two method: skeletonization method and the improved, reoriented method, introduced by Tatekawa et al. 2023.
+This repository describes the calculation of DTI-ALPS, introduced by Taoka et al. 2017 via two method: skeletonization method and the improved, reoriented method, introduced by Tatekawa et al. 2022.
 The provided scripts can be used after preprocessing the DTI files (see good tutorial: https://andysbrainbook.readthedocs.io/en/latest/MRtrix/MRtrix_Course/MRtrix_04_Preprocessing.html) and running the complete FSL TBSS pipeline and tbss_non_FA on diffusivity files. Manual ROI selection is required for the skeletonization method.
 
 The following steps are recommended after preprocessing of the DTI images:
