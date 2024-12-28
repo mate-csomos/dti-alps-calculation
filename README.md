@@ -62,11 +62,5 @@ The following steps are recommended after preprocessing of the DTI images:
               * Search radius: 4
               * Target image: set according the location that is selected under the ROIs
           7. Press "Fill selected voxels" then save the mask image. Repeat this 4 times. Make sure different target image is selected for each roi.
-         ```
-         skeleton_lproj_mask.nii.gz
-         skeleton_lassoc_mask.nii.gz
-         skeleton_rproj_mask.nii.gz
-         skeleton_rassoc_mask.nii.gz
-         ```
     4. Run both extract_diffusivities_file.
     5. Run [calculate_alps.py](tbss/stats/calculate_alps.py). [python with pandas package is required]
