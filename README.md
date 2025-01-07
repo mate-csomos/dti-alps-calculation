@@ -1,5 +1,5 @@
 # dti-alps-calculation
-This repository describes the calculation of DTI-ALPS, introduced by Taoka et al. 2017 via two method: skeletonization method and the improved, reoriented method, introduced by Tatekawa et al. 2022.
+This repository describes the calculation of DTI-ALPS, introduced by [Taoka et al. 2017](https://doi.org/10.1007/s11604-017-0617-z) via two method: [skeletonization method](https://doi.org/10.1016/j.mri.2025.110319) and the improved, reoriented method, introduced by [Tatekawa et al. 2022](https://link.springer.com/article/10.1007/s11604-022-01370-2).
 The provided scripts can be used after preprocessing the DTI files (see good tutorial: https://andysbrainbook.readthedocs.io/en/latest/MRtrix/MRtrix_Course/MRtrix_04_Preprocessing.html) and running the complete FSL TBSS pipeline and tbss_non_FA on diffusivity files. Manual ROI selection is required for the skeletonization method.
 
 The following steps are recommended after preprocessing of the DTI images:
@@ -52,7 +52,7 @@ The following steps are recommended after preprocessing of the DTI images:
            skeleton_rproj_mask.nii.gz
            skeleton_rassoc_mask.nii.gz
           ```
-          2. Choose the all_FA_skeletonised layer.
+          2. Choose the all_FA_skeletonized layer.
           3. Toggle "select" mode and use the "select by intensity" tool.
           4. Use 3D search (3D icon) and limit the search to a circle (circle icon).
           5. Parameters:
@@ -64,3 +64,6 @@ The following steps are recommended after preprocessing of the DTI images:
           7. Press "Fill selected voxels" then save the mask image. Repeat this 4 times. Make sure different target image is selected for each roi.
     4. Run both extract_diffusivities_file.
     5. Run [calculate_alps.py](tbss/stats/calculate_alps.py). [python with pandas package is required]
+
+
+If you found this guide helpful, please cite the paper introducing the skeletonization method: https://doi.org/10.1016/j.mri.2025.110319
